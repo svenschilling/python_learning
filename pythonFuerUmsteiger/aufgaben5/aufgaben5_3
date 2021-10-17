@@ -1,0 +1,2 @@
+Wie kann man am einfachsten das letzte Zeichen in einem String ausgeben?
+print(myString[:-1])

@@ -1,0 +1,2 @@
+Wie erhält man das erste Element einer Liste?
+myList[0]

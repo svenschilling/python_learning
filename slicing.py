@@ -7,7 +7,9 @@ newTupel = tupel[0:2]
 newListe = liste[2:]
 newString = string[-8:-5]
 newListe2 = liste2[1:8:2]
+newString2 = string[::2]
 
+print(newString2)
 print(newListe2)
 print(newTupel)
 print(newListe)
