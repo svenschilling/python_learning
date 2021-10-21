@@ -1,4 +1,8 @@
+from typing import ClassVar
+
+
 class dog:
+    
     def __init__(self, petname, dograce, dogage):
         self.name = petname
         self.race = dograce
@@ -10,7 +14,7 @@ class dog:
         print("Race: " + self.race)
         print("Age: " + str(self.age))
         pass
-
+"""
     def setDogAge (self, dogage):
         self.age = dogage
         pass
@@ -26,6 +30,7 @@ class dog:
     def bark(self):
         print("woof woof")
         pass
-
+"""
 test = dog("chuchu","dobermann",11)
 test.status()
+

@@ -1,3 +1,5 @@
+# SLICING : UP TO BUT NOT INCLUDING!!!!!
+
 a = [3,4,-10]
 a.append(2)
 print(a)

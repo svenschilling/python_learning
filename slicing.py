@@ -1,3 +1,4 @@
+# SLICING : UP TO BUT NOT INCLUDING!!!!!
 tupel = ("red","blue","green")
 liste = ["red","blue","green","black","pink"]
 liste2 = ["eins","zwei","drei","vier","fünf","sechs","sieben","acht"]
