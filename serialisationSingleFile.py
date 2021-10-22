@@ -10,6 +10,13 @@ class Telefonbuch:
         self.nachname = familienname
         self.nummer = telefonnummer
 
+    def __str__(self):
+        return self.name
+    
+    def vorname(self, vorname):
+        self.name = vorname
+        pass
+        
 # file handling
 try:
     file = open("serial.bin", "bw")
