@@ -1,7 +1,11 @@
+import csv
+
 class Item:
     
-    pay_rate = 0.8 # discount of 20%
+    # discount of 20%
+    pay_rate = 0.8 
 
+    # all created instances 
     all = []
 
     def __init__(self, name: str, price: float, quantity=0):
@@ -24,25 +28,25 @@ class Item:
     def applyDiscount(self):
         self.itemPrice *= self.pay_rate
 
-item1 = Item("Phone",100,5)
-item2 = Item("Laptop",1000,3)
-item3 = Item("Cable",10,5)
-item4 = Item("Mouse",50,5)
-item5 = Item("Keyboard",75,5)
+    # @classmethod to make the function only useable on classlevel instead of both (class/instancetiate level)
+    @classmethod
+    def instantiateFromCSV(cls):
+        # 'with' statement is like 'usign' in c# and get closed automaticly after use
+        with open('item.csv','r') as csvFile:
+            reader = csv.DictReader(csvFile)
+            items = list(reader)
+        
+        for item in items:
+            Item(
+                name=item.get('name'),
+                price=float(item.get('price')),
+                quantity=int(item.get('quantity')),
+            )
 
-print(f"{item2.itemName} costs {item2.itemPrice}")
+    # representation of an object
+    def __repr__(self):
+        return f"obj repr = {self.itemName} , {self.itemPrice} : {self.itemQuantity}"
 
-print(Item.__dict__)
-print(item1.__dict__)
 
-item1.applyDiscount()
-print(item1.itemPrice)
-
-item2.pay_rate = 0.7
-item2.applyDiscount()
-print(item2.itemPrice)
-
+Item.instantiateFromCSV()
 print(Item.all)
-
-for instance in Item.all:
-    print(instance.itemName)
